@@ -1,6 +1,6 @@
 echo "Building and publishing"
 
-docker build -t convee/api /github/workspace
+docker build -t convee/api $GITHUB_WORKSPACE
 
 aws lightsail push-container-image --service-name conveeapi --label pipeline --image convee/api
 
