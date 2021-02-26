@@ -35,4 +35,4 @@ RUN apk --no-cache add curl jq \
 
 COPY buildAndDeploy.sh . 
 
-ENTRYPOINT ["sh", "buildAndDeploy.sh"]
+ENTRYPOINT ["sh", "/buildAndDeploy.sh"]
