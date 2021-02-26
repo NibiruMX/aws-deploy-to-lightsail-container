@@ -1,0 +1,11 @@
+name: "Build and deploy to lightsail"
+description: "Build a docker image, push it to lightsail and create a deployment from ti"
+inputs:
+  database-url:
+    description: "Database connection url"
+    required: true
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  args:
+    - ${{ inputs.database-url }}
